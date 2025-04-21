@@ -82,103 +82,126 @@
       <!-- catalog -->
       <section id="catalog">
         <h1>Catalog</h1>
+        {{-- <div id="products">
+          <article>
+            <img
+              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="product"
+              class="product-images"
+            />
+            <h3>Product Name</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="quantity-control hidden">
+              <button><h3 class="quantity-minus-inputs">-</h3></button>
+              <h3 class="quantity-h3">0</h3>
+              <button><h3 class="quantity-plus-inputs">+</h3></button
+              ><button class="confirm-button">Confirm</button>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="product"
+              class="product-images"
+            />
+            <h3>Product Name</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="quantity-control hidden">
+              <button><h3 class="quantity-minus-inputs">-</h3></button>
+              <h3 class="quantity-h3">0</h3>
+              <button><h3 class="quantity-plus-inputs">+</h3></button
+              ><button class="confirm-button">Confirm</button>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="product"
+              class="product-images"
+            />
+            <h3>Product Name</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="quantity-control hidden">
+              <button><h3 class="quantity-minus-inputs">-</h3></button>
+              <h3 class="quantity-h3">0</h3>
+              <button><h3 class="quantity-plus-inputs">+</h3></button
+              ><button class="confirm-button">Confirm</button>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="product"
+              class="product-images"
+            />
+            <h3>Product Name</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="quantity-control hidden">
+              <button><h3 class="quantity-minus-inputs">-</h3></button>
+              <h3 class="quantity-h3">0</h3>
+              <button><h3 class="quantity-plus-inputs">+</h3></button
+              ><button class="confirm-button">Confirm</button>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="product"
+              class="product-images"
+            />
+            <h3>Product Name</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="quantity-control hidden">
+              <button><h3 class="quantity-minus-inputs">-</h3></button>
+              <h3 class="quantity-h3">0</h3>
+              <button><h3 class="quantity-plus-inputs">+</h3></button
+              ><button class="confirm-button">Confirm</button>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="product"
+              class="product-images"
+            />
+            <h3>Product Name</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="quantity-control hidden">
+              <button><h3 class="quantity-minus-inputs">-</h3></button>
+              <h3 class="quantity-h3">0</h3>
+              <button><h3 class="quantity-plus-inputs">+</h3></button
+              ><button class="confirm-button">Confirm</button>
+            </div>
+          </article>
+        </div> --}}
         <div id="products">
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
+          @foreach($products as $product)
+          @if ($product->is_available) 
+            <article>
+              <img
+                src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="product"
+                class="product-images"
+              />
+              <h3>{{ $product->name }}</h3>
+              <p>{{ $product->description }}</p>
+              <p>${{ number_format($product->price, 2) }}</p>
+              <button class="add-to-cart">Add to Cart</button>
+              <div class="quantity-control hidden">
+                <button><h3 class="quantity-minus-inputs">-</h3></button>
+                <h3 class="quantity-h3">0</h3>
+                <button><h3 class="quantity-plus-inputs">+</h3></button
+                ><button class="confirm-button">Confirm</button>
+              </div>
+            </article>
+          @endif
+          @endforeach
         </div>
       </section>
 

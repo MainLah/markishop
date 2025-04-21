@@ -31,6 +31,36 @@ class ProductSeeder extends Seeder
                 'description' => 'Ini adalah produk 3',
                 'price' => 29.99,
                 'is_available' => true,
+            ],
+            [
+                'name' => 'Product 4',
+                'description' => 'Ini adalah produk 4',
+                'price' => 29.99,
+                'is_available' => true,
+            ],
+            [
+                'name' => 'Product 5',
+                'description' => 'Ini adalah produk 5',
+                'price' => 5.25,
+                'is_available' => true,
+            ],
+            [
+                'name' => 'Product 6',
+                'description' => 'Ini adalah produk 6',
+                'price' => 1.99,
+                'is_available' => true,
+            ],
+            [
+                'name' => 'Product 7',
+                'description' => 'Ini adalah produk 7',
+                'price' => 99.99,
+                'is_available' => true,
+            ],
+            [
+                'name' => 'Product 8',
+                'description' => 'Ini adalah produk 8',
+                'price' => 79.99,
+                'is_available' => false,
             ]
         ];
 
