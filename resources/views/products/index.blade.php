@@ -82,125 +82,43 @@
       <!-- catalog -->
       <section id="catalog">
         <h1>Catalog</h1>
-        {{-- <div id="products">
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="product"
-              class="product-images"
-            />
-            <h3>Product Name</h3>
-            <p>$9.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <div class="quantity-control hidden">
-              <button><h3 class="quantity-minus-inputs">-</h3></button>
-              <h3 class="quantity-h3">0</h3>
-              <button><h3 class="quantity-plus-inputs">+</h3></button
-              ><button class="confirm-button">Confirm</button>
-            </div>
-          </article>
-        </div> --}}
         <div id="products">
-          @foreach($products as $product)
-          @if ($product->is_available) 
-            <article>
-              <img
-                src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="product"
-                class="product-images"
-              />
-              <h3>{{ $product->name }}</h3>
-              <p>{{ $product->description }}</p>
-              <p>${{ number_format($product->price, 2) }}</p>
-              <button class="add-to-cart">Add to Cart</button>
-              <div class="quantity-control hidden">
-                <button><h3 class="quantity-minus-inputs">-</h3></button>
-                <h3 class="quantity-h3">0</h3>
-                <button><h3 class="quantity-plus-inputs">+</h3></button
-                ><button class="confirm-button">Confirm</button>
-              </div>
-            </article>
-          @endif
+          @foreach ($products as $product)
+            @if ($product->is_available) 
+              <article>
+                <img
+                  src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="product"
+                  class="product-images"
+                />
+                <div class="card-text">
+                  <h3>{{ $product->name }}</h3>
+                  <p>{{ $product->description }}</p>
+                  <p>${{ number_format($product->price, 2) }}</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+                <div class="quantity-control hidden">
+                  <button><h3 class="quantity-minus-inputs">-</h3></button>
+                  <h3 class="quantity-h3">0</h3>
+                  <button><h3 class="quantity-plus-inputs">+</h3></button
+                  ><button class="confirm-button">Confirm</button>
+                </div>
+              </article>
+            @else
+              <article>
+                <img
+                  src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="product"
+                  class="product-images"
+                />
+                <div class="card-text">
+                  <h3>{{ $product->name }}</h3>
+                  <p>{{ $product->description }}</p>
+                  <p>${{ number_format($product->price, 2) }}</p>
+                </div>
+                <button class="add-to-cart" disabled>Out of stock</button>
+              </article>
+            @endif
           @endforeach
         </div>
       </section>
@@ -208,65 +126,21 @@
       <!-- testi -->
       <section id="testi">
         <h1>Testimonies</h1>
-        <article>
-          <span>
-            <img
-              src="assets/user-3296.svg"
-              alt="user"
-              class="testimoni-icons"
-            />
-          </span>
+        @foreach ($testimonies as $testimony)
+          <article>
+            <span>
+              <img
+                src="assets/user-3296.svg"
+                alt="user"
+                class="testimoni-icons"
+              />
+            </span>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            atque, consequuntur voluptate vel ipsum temporibus ea sapiente
-            minima dicta natus!
-          </p>
-        </article>
-        <article>
-          <span>
-            <img
-              src="assets/user-3296.svg"
-              alt="user"
-              class="testimoni-icons"
-            />
-          </span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            atque, consequuntur voluptate vel ipsum temporibus ea sapiente
-            minima dicta natus!
-          </p>
-        </article>
-        <article>
-          <span>
-            <img
-              src="assets/user-3296.svg"
-              alt="user"
-              class="testimoni-icons"
-            />
-          </span>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            atque, consequuntur voluptate vel ipsum temporibus ea sapiente
-            minima dicta natus!
-          </p>
-        </article>
-        <article>
-          <span>
-            <img
-              src="assets/user-3296.svg"
-              alt="user"
-              class="testimoni-icons"
-            />
-          </span>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            atque, consequuntur voluptate vel ipsum temporibus ea sapiente
-            minima dicta natus!
-          </p>
-        </article>
+            <p>
+              {{  $testimony->Testimony }}
+            </p>
+          </article>
+        @endforeach
       </section>
 
       <!-- contact us -->
