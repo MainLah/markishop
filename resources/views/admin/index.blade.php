@@ -17,8 +17,12 @@
                 </div>
                 <p>Availability: {{ $product->is_available ? 'Available' : 'Out of stock' }}</p>
                 <div id="product-buttons">
-                    <button><a href=""></a>Edit</button>
-                    <button><a href=""></a>Delete</button>
+                    <button><a href="{{ route('admin.edit', $product) }}">Edit</a></button>
+                    <form action="{{ route('admin.destroy', $product) }}" method="POST" style="display: inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                    </form>
                 </div>
             </article>
             @endforeach
