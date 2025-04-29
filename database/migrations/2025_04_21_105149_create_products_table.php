@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->decimal('price', 10, 2);
-            $table->boolean('is_available')->default(true);
+            $table->boolean('is_available')->default(false);
             $table->timestamps();
         });
     }
