@@ -45,7 +45,10 @@ class AdminProductController extends Controller
             'is_available' => 'boolean',
         ]);
 
-        $product->update($request->all());
+        $data = $request->all();
+        $data['is_available'] = $request->has('is_available') ? true : false;
+
+        $product->update($data);
         return redirect()->route('admin.index')->with('success', 'Product updated');
     }
 }
