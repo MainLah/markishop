@@ -1,13 +1,13 @@
 @extends('layouts.header')
 @section('content')
+    <div id="create"><button><a href="{{ route('admin.create') }}">Add a product</a></button></div>
 
     @if (session('success'))
-        <div>
+        <div id="success-message">
             {{ session('success') }}
         </div>
     @endif
 
-    <div id="create"><button><a href="{{ route('admin.create') }}">Add a product</a></button></div>
     <section id="catalog" style="padding: 1rem;">
         <div id="products">
             @foreach ($products as $product)
