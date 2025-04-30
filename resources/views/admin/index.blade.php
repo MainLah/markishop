@@ -1,5 +1,12 @@
 @extends('layouts.header')
 @section('content')
+
+    @if (session('success'))
+        <div>
+            {{ session('success') }}
+        </div>
+    @endif
+
     <div id="create"><button><a href="{{ route('admin.create') }}">Add a product</a></button></div>
     <section id="catalog" style="padding: 1rem;">
         <div id="products">
@@ -21,7 +28,7 @@
                     <form action="{{ route('admin.destroy', $product) }}" method="POST" style="display: inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit">Delete</button>
+                        <button type="submit" onclick="return confirm('Delete this product?')">Delete</button>
                     </form>
                 </div>
             </article>
