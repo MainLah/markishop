@@ -51,4 +51,10 @@ class AdminProductController extends Controller
         $product->update($data);
         return redirect()->route('admin.index')->with('success', 'Product updated');
     }
+
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        return redirect()->route('admin.index')->with("success", "Product deleted");
+    }
 }
