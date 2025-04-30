@@ -12,9 +12,9 @@
 </div>
 @endif
 
-<form action="{{ route('admin.store') }}" method="POST">
+<form action="{{ route('admin.store') }}" method="POST" id="form-create-product">
     @csrf
-        <div>
+        <div id="form-create-product-inputs">
             <label for="product-name">Product Name</label>
             <input type="text" id="product-name" name="name" placeholder="Product Name..." required>
             <label for="product-desc">Product Description</label>
@@ -26,6 +26,9 @@
                 <label for="is_available">Available to purchase</label>
             </div>
         </div>
-    <button type="submit">Create Product</button>
+        <div>
+            <button><a href="{{ route('admin.index') }}">Back</a></button>
+            <button type="submit">Create Product</button>
+        </div>
 </form>
 @endsection

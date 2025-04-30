@@ -12,10 +12,10 @@
 </div>
 @endif
 
-<form action="{{ route('admin.update', $product->id) }}" method="POST">
+<form action="{{ route('admin.update', $product->id) }}" method="POST" id="form-edit-product">
     @csrf
     @method('PUT')
-    <div>
+    <div id="form-edit-product-inputs">
         <label for="product-name">Product Name</label>
         <input type="text" id="product-name" name="name" placeholder="Product Name..." required value="{{ $product->name }}">
         <label for="product-desc">Product Description</label>
@@ -27,6 +27,9 @@
             <label for="is_available">Available to purchase</label>
         </div>
     </div>
-    <button type="submit">Update Product</button>
+    <div>
+        <button><a href="{{ route('admin.index') }}">Back</a></button>
+        <button type="submit">Update Product</button>
+    </div>
 </form>
 @endsection
