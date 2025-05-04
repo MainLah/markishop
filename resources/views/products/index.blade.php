@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/main-style.css" />
+    <link rel="stylesheet" href="{{asset('style/main-style.css?v=').time()}}" />
     <title>Markishop</title>
   </head>
   <body>
@@ -29,6 +29,12 @@
           <li>
             <a class="nav-links">Profile</a>
           </li>
+          <li>
+            <form action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button class="logout-button" type="submit">Logout</button>
+            </form>
+          </li>
         </ul>
         <img
           src="assets/burger-menu-svgrepo-com.svg"
@@ -53,6 +59,12 @@
           </li>
           <li>
             <a class="nav-links">Profile</a>
+          </li>
+          <li>
+            <form action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button class="logout-button" type="submit">Logout</button>
+            </form>
           </li>
         </ul>
       </nav>
@@ -96,12 +108,12 @@
                   <p>{{ $product->description }}</p>
                   <p>${{ number_format($product->price, 2) }}</p>
                 </div>
-                <button class="add-to-cart">Add to Cart</button>
+                <button class="main-button add-to-cart">Add to Cart</button>
                 <div class="quantity-control hidden">
-                  <button><h3 class="quantity-minus-inputs">-</h3></button>
+                  <button class="main-button"><h3 class="quantity-minus-inputs">-</h3></button>
                   <h3 class="quantity-h3">0</h3>
-                  <button><h3 class="quantity-plus-inputs">+</h3></button
-                  ><button class="confirm-button">Confirm</button>
+                  <button class="main-button"><h3 class="quantity-plus-inputs">+</h3></button
+                  ><button class="main-button confirm-button">Confirm</button>
                 </div>
               </article>
             @else
@@ -116,7 +128,7 @@
                   <p>{{ $product->description }}</p>
                   <p>${{ number_format($product->price, 2) }}</p>
                 </div>
-                <button class="add-to-cart" disabled>Out of stock</button>
+                <button class="main-button add-to-cart" disabled>Out of stock</button>
               </article>
             @endif
           @endforeach
@@ -151,7 +163,7 @@
           <input type="email" placeholder="Email" id="email-form" />
           <textarea placeholder="Message" id="message-form"></textarea>
           <div>
-            <button id="form-button">Send</button>
+            <button class="main-button" id="form-button">Send</button>
           </div>
         </form>
       </section>

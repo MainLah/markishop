@@ -1,8 +1,8 @@
-@extends('layouts.header')
+@extends('layouts.admin_template')
 @section('content')
     <div id="buttons">
         <div id="logout">
-            <form action="{{ route('logout') }}" method="POST">
+            <form action="{{ route('admin-logout') }}" method="POST">
                 @csrf
                 <button type="submit">Log out</button>
             </form>
