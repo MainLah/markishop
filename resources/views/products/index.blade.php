@@ -179,6 +179,6 @@
       </address>
     </footer>
 
-    <script src="script/script.js"></script>
+    <script src="{{ asset('script/script.js?v=').time() }}"></script>
   </body>
 </html>
