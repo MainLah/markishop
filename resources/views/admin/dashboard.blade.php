@@ -1,6 +1,16 @@
 @extends('layouts.header')
 @section('content')
-    <div id="create"><button><a href="{{ route('admin.create') }}">Add a product</a></button></div>
+    <div id="buttons">
+        <div id="logout">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit">Log out</button>
+            </form>
+        </div>
+        <div id="create">
+            <button><a href="{{ route('admin.create') }}">Add a product</a></button>
+        </div>
+    </div>
 
     @if (session('success'))
         <div id="success-message">

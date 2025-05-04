@@ -46,6 +46,30 @@ button:hover {
     transition: transform 0.5s;
 }
 
+/* admin login page */
+
+#admin-login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#admin-login-form > input {
+    width: clamp(20rem, 20vw, 30rem);
+}
+
+#admin-email-input,
+#admin-password-input {
+    height: 2rem;
+}
+
 /* alert success */
 
 #success-message {
@@ -62,7 +86,16 @@ button:hover {
 
 /* product */
 
+#buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
 #create {
+    margin: 1rem;
+}
+
+#logout {
     margin: 1rem;
 }
 
