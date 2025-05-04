@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.admin_template')
 
 @section('content')
 @if ($errors->any())
