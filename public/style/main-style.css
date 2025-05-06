@@ -369,7 +369,7 @@ quantity-button:hover {
 
 #contact form > input,
 #contact form > textarea {
-    width: 25rem;
+    width: 100%;
     padding: 0.5rem;
 }
 
@@ -499,11 +499,6 @@ footer a:hover {
     .card {
         padding: 1rem;
         margin: 1rem 0;
-    }
-
-    #contact form > input,
-    #contact form > textarea {
-        width: 15rem;
     }
 
     footer {
