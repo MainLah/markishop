@@ -31,8 +31,8 @@
                     <h3>{{ $product->name }}</h3>
                     <p>{{ $product->description }}</p>
                     <p>${{ number_format($product->price, 2) }}</p>
+                    <p>Availability: {{ $product->is_available ? 'Available' : 'Out of stock' }}</p>
                 </div>
-                <p>Availability: {{ $product->is_available ? 'Available' : 'Out of stock' }}</p>
                 <div id="product-buttons">
                     <button><a href="{{ route('admin.edit', $product) }}">Edit</a></button>
                     <form action="{{ route('admin.destroy', $product) }}" method="POST" style="display: inline;">

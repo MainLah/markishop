@@ -35,8 +35,10 @@ const coordsForNav = {
 const coordsArray = Object.keys(coordsForNav);
 for (let i = 0; i < coordsArray.length; i++) {
     navLinks[i].onclick = (e) => {
-        e.preventDefault();
-        scroll(coordsForNav[coordsArray[i]]);
+        if (e.target.textContent !== "Cart") {
+            e.preventDefault();
+            scroll(coordsForNav[coordsArray[i]]);
+        }
     };
     navLinks[i + 6].onclick = (e) => {
         e.preventDefault();
@@ -72,7 +74,7 @@ burgerSVG.onclick = () => {
     }
 
     if (header.style.height === "3.75rem") {
-        header.style.height = "28rem";
+        header.style.height = "26rem";
     } else {
         header.style.height = "3.75rem";
     }
@@ -110,52 +112,50 @@ button.onclick = (e) => {
 
 // add to cart control
 
-const addToCartButtons = document.querySelectorAll(".add-to-cart");
-const quantityControl = document.querySelectorAll(".quantity-control");
-const confirmButtons = document.querySelectorAll(".confirm-button");
-const plus = document.querySelectorAll(".quantity-plus-inputs");
-const minus = document.querySelectorAll(".quantity-minus-inputs");
-const quantityLabels = document.querySelectorAll(".quantity-h3");
-let counter = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const products = document.querySelectorAll("article[data-product-id]");
 
-addToCartButtons.forEach((button, i) => {
-    button.onclick = () => {
-        if (!button.classList.contains("hidden")) {
-            button.classList.add("hidden");
-            quantityControl[i].classList.remove("hidden");
-        }
-    };
-});
+    products.forEach((product) => {
+        const minusButton = product.querySelector(".quantity-minus");
+        const plusButton = product.querySelector(".quantity-plus");
+        const quantityInput = product.querySelector(".quantity-input");
+        const confirmButton = product.querySelector(".confirm-button");
 
-confirmButtons.forEach((button, i) => {
-    button.onclick = () => {
-        if (!button.classList.contains("hidden")) {
-            quantityControl[i].classList.add("hidden");
-            addToCartButtons[i].classList.remove("hidden");
-            counter = 0;
-            quantityLabels[i].textContent = counter;
-        }
-    };
-});
+        minusButton.addEventListener("click", () => {
+            let quantity = parseInt(quantityInput.value);
+            if (quantity > 1) {
+                quantityInput.value = quantity - 1;
+            }
+        });
 
-plus.forEach((button, i) => {
-    button.onclick = () => {
-        counter++;
-        quantityLabels[i].textContent = counter;
-        if (counter > 99) {
-            counter = 99;
-            quantityLabels[i].textContent = counter;
-        }
-    };
-});
+        plusButton.addEventListener("click", () => {
+            let quantity = parseInt(quantityInput.value);
+            quantityInput.value = quantity + 1;
+        });
 
-minus.forEach((button, i) => {
-    button.onclick = () => {
-        counter--;
-        quantityLabels[i].textContent = counter;
-        if (counter < 0) {
-            counter = 0;
-            quantityLabels[i].textContent = counter;
-        }
-    };
+        confirmButton.addEventListener("click", () => {
+            const productId = product.getAttribute("data-product-id");
+            const quantity = parseInt(quantityInput.value);
+
+            fetch(`/cart/add/${productId}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document
+                        .querySelector('meta[name="csrf-token"]')
+                        .getAttribute("content"),
+                },
+                body: JSON.stringify({ quantity }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        alert("Product added to cart!");
+                    } else {
+                        alert("Failed to add product to cart.");
+                    }
+                })
+                .catch((error) => console.error("Error:", error));
+        });
+    });
 });
