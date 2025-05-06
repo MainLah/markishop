@@ -6,7 +6,7 @@
     <strong>Oops!</strong> Please fix the following errors:
     <ul class="mb-0">
         @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
         @endforeach
     </ul>
 </div>

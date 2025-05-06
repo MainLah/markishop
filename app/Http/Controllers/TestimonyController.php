@@ -15,6 +15,6 @@ class TestimonyController extends Controller
             'testimony' => 'required|max:255'
         ]);
         Testimony::create($request->all());
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Message sent!');
     }
 }

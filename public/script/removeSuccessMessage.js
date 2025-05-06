@@ -1,4 +1,4 @@
-const alert = document.querySelector("#success-message");
+const alert = document.querySelector(".success-message");
 
 if (alert) {
     setTimeout(() => {
