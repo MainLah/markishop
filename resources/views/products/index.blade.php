@@ -149,7 +149,7 @@
             </span>
 
             <p>
-              {{ $testimony->Testimony }}
+              {{ $testimony->testimony }}
             </p>
           </article>
         @endforeach
@@ -158,12 +158,13 @@
       <!-- contact us -->
       <section id="contact">
         <h1>Contact us</h1>
-        <form>
-          <input type="text" placeholder="Name" id="name-form" />
-          <input type="email" placeholder="Email" id="email-form" />
-          <textarea placeholder="Message" id="message-form"></textarea>
+        <form action="{{ route('testimony.create') }}" method="POST">
+          @csrf
+          <input type="text" placeholder="Name" id="name-form" name="name"/>
+          <input type="email" placeholder="Email" id="email-form" name="email"/>
+          <textarea placeholder="Message" id="message-form" name="testimony"></textarea>
           <div>
-            <button class="main-button" id="form-button">Send</button>
+            <button class="main-button" id="form-button" type="submit">Send</button>
           </div>
         </form>
       </section>

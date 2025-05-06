@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\TestimonyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,5 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/cart/update/{cart}', [CartController::class, 'update'])->name('cart.update');
     Route::delete('/cart/remove/{cart}', [CartController::class, 'remove'])->name('cart.remove');
 });
+
+Route::post('/contact', [TestimonyController::class, 'create'])->name('testimony.create');

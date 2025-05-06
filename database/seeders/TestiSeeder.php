@@ -15,19 +15,29 @@ class TestiSeeder extends Seeder
     {
         $testimonies = [
             [
-                'Testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
+                'name' => 'Yanto Uchiha',
+                'email' => 'testing@gmail.com',
+                'testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
             ],
             [
-                'Testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
+                'name' => 'Yanto Uchiha',
+                'email' => 'testing@gmail.com',
+                'testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
             ],
             [
-                'Testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
+                'name' => 'Yanto Uchiha',
+                'email' => 'testing@gmail.com',
+                'testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
             ],
             [
-                'Testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
+                'name' => 'Yanto Uchiha',
+                'email' => 'testing@gmail.com',
+                'testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
             ],
             [
-                'Testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
+                'name' => 'Yanto Uchiha',
+                'email' => 'testing@gmail.com',
+                'testimony' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque, consequuntur voluptate vel ipsum temporibus ea sapiente minima dicta natus!',
             ],
         ];
 
