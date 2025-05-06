@@ -28,7 +28,7 @@ class AdminProductController extends Controller
         ]);
 
         Product::create($request->all());
-        return redirect()->route('admin.dashboard')->with('success', 'Product created');
+        return redirect()->route('admin.index')->with('success', 'Product created');
     }
 
     public function edit(Product $product)
@@ -49,12 +49,12 @@ class AdminProductController extends Controller
         $data['is_available'] = $request->has('is_available') ? true : false;
 
         $product->update($data);
-        return redirect()->route('admin.dashboard')->with('success', 'Product updated');
+        return redirect()->route('admin.index')->with('success', 'Product updated');
     }
 
     public function destroy(Product $product)
     {
         $product->delete();
-        return redirect()->route('admin.dashboard')->with("success", "Product deleted");
+        return redirect()->route('admin.index')->with("success", "Product deleted");
     }
 }

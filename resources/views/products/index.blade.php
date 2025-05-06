@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('style/main-style.css?v=').time()}}" />
     <title>Markishop</title>
   </head>
@@ -24,7 +25,7 @@
             <a class="nav-links">Contact</a>
           </li>
           <li>
-            <a class="nav-links">Cart</a>
+            <a class="nav-links" href="{{ route('cart.index') }}">Cart</a>
           </li>
           <li>
             <a class="nav-links">Profile</a>
@@ -32,7 +33,7 @@
           <li>
             <form action="{{ route('logout') }}" method="POST">
               @csrf
-              <button class="logout-button" type="submit">Logout</button>
+              <button class="logout-button" type="submit"><p>Logout</p></button>
             </form>
           </li>
         </ul>
@@ -55,7 +56,7 @@
             <a class="nav-links">Contact</a>
           </li>
           <li>
-            <a class="nav-links">Cart</a>
+            <a class="nav-links" href="{{ route('cart.index') }}">Cart</a>
           </li>
           <li>
             <a class="nav-links">Profile</a>
@@ -63,7 +64,7 @@
           <li>
             <form action="{{ route('logout') }}" method="POST">
               @csrf
-              <button class="logout-button" type="submit">Logout</button>
+              <button class="logout-button" type="submit"><p>Logout</p></button>
             </form>
           </li>
         </ul>
@@ -93,11 +94,11 @@
 
       <!-- catalog -->
       <section id="catalog">
-        <h1>Catalog</h1>
+        <h1 style="margin-bottom: 1rem;">Catalog</h1>
         <div id="products">
           @foreach ($products as $product)
             @if ($product->is_available) 
-              <article>
+              <article data-product-id="{{ $product->id }}">
                 <img
                   src="https://images.pexels.com/photos/5760878/pexels-photo-5760878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="product"
@@ -108,12 +109,11 @@
                   <p>{{ $product->description }}</p>
                   <p>${{ number_format($product->price, 2) }}</p>
                 </div>
-                <button class="main-button add-to-cart">Add to Cart</button>
-                <div class="quantity-control hidden">
-                  <button class="main-button"><h3 class="quantity-minus-inputs">-</h3></button>
-                  <h3 class="quantity-h3">0</h3>
-                  <button class="main-button"><h3 class="quantity-plus-inputs">+</h3></button
-                  ><button class="main-button confirm-button">Confirm</button>
+                <div class="quantity-control">
+                  <button class="quantity-button quantity-minus">-</button>
+                  <input type="number" class="quantity-input" value="1" min="1">
+                  <button class="quantity-button quantity-plus">+</button>
+                  <button class="main-button confirm-button">Add to Cart</button>
                 </div>
               </article>
             @else
