@@ -10,6 +10,8 @@ class Testimony extends Model
     use HasFactory;
 
     protected $fillable = [
-        'Testimony',
+        'name',
+        'email',
+        'testimony'
     ];
 }

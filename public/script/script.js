@@ -82,33 +82,33 @@ burgerSVG.onclick = () => {
 
 // validate form
 
-const errorMessage = document.querySelector("#error-message-form");
-const form = document.querySelector("form");
-const button = document.querySelector("#form-button");
+// const errorMessage = document.querySelector("#error-message-form");
+// const form = document.querySelector("form");
+// const button = document.querySelector("#form-button");
 
-button.onclick = (e) => {
-    errorMessage.classList.add("hidden");
-    e.preventDefault();
+// button.onclick = (e) => {
+//     errorMessage.classList.add("hidden");
+//     e.preventDefault();
 
-    const elements = {
-        Nama: document.querySelector("#name-form"),
-        Email: document.querySelector("#email-form"),
-        Pesan: document.querySelector("#message-form"),
-    };
+//     const elements = {
+//         Nama: document.querySelector("#name-form"),
+//         Email: document.querySelector("#email-form"),
+//         Pesan: document.querySelector("#message-form"),
+//     };
 
-    for (const key in elements) {
-        if (!elements[key].value) {
-            errorMessage.textContent =
-                `${key} tidak boleh kosong!`.toUpperCase();
-            errorMessage.classList.remove("hidden");
-            scroll(3600);
-            return;
-        }
-    }
+//     for (const key in elements) {
+//         if (!elements[key].value) {
+//             errorMessage.textContent =
+//                 `${key} tidak boleh kosong!`.toUpperCase();
+//             errorMessage.classList.remove("hidden");
+//             scroll(3600);
+//             return;
+//         }
+//     }
 
-    form.reset();
-    window.alert("Pesan berhasil terkirim!");
-};
+//     form.reset();
+//     window.alert("Pesan berhasil terkirim!");
+// };
 
 // add to cart control
 

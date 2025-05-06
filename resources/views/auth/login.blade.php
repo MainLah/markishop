@@ -1,6 +1,12 @@
 @extends('layouts.template')
 
 @section('content')
+    
+    @if (session('success'))
+        <div class="success-message">
+            {{ session('success') }}
+        </div>
+    @endif
     <div id="container-login">
         <div id="login">
             <div id="logo">
@@ -26,5 +32,7 @@
             </form>
         </div>
     </div>
+
+    <script src="{{ asset('script/removeSuccessMessage.js?v=').time() }}"></script>
 
 @endsection

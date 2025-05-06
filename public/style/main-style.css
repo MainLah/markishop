@@ -56,6 +56,18 @@ button:hover {
     transform: scale(1.05);
 }
 
+.success-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
 /* LOGIN */
 
 #logo {
@@ -143,7 +155,7 @@ button:hover {
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 99;
     background-color: #f9f9f9;
     color: #000000;
     padding: 1rem 2rem;
@@ -369,7 +381,7 @@ quantity-button:hover {
 
 #contact form > input,
 #contact form > textarea {
-    width: 25rem;
+    width: 100%;
     padding: 0.5rem;
 }
 
@@ -499,11 +511,6 @@ footer a:hover {
     .card {
         padding: 1rem;
         margin: 1rem 0;
-    }
-
-    #contact form > input,
-    #contact form > textarea {
-        width: 15rem;
     }
 
     footer {

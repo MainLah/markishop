@@ -9,6 +9,6 @@
 </head>
 <body>
     @yield('content')
-    <script src="{{ asset('script/adminPageScript.js?v=').time() }}"></script>
+    <script src="{{ asset('script/removeSuccessMessage.js?v=').time() }}"></script>
 </body>
 </html>
