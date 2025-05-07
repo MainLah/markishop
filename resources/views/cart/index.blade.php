@@ -10,7 +10,7 @@
     @endif
     <div id="container-cart">
         <div id="container-table">
-            <h1>Your Cart</h1>
+            <h1 id="cart-title">Your Cart</h1>
         @if ($cartItems->isEmpty())
             <p>Your cart is empty.</p>
         @else

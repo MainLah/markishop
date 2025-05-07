@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = DB::table('products')->paginate(10);
+        $products = DB::table('products')->paginate(9);
         $testimonies = DB::table('testimonies')->paginate(5);
 
         return view('products.index', compact('products', 'testimonies'));
