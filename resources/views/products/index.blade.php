@@ -26,7 +26,7 @@
           <a class="nav-links" href="{{ route('cart.index') }}">Cart</a>
         </li>
         <li>
-          <a class="nav-links">Profile</a>
+          <a class="nav-links" href="{{ route('profile.index') }}">Profile</a>
         </li>
         <li>
           <form action="{{ route('logout') }}" method="POST">
@@ -45,7 +45,7 @@
           <a class="nav-links">Home</a>
         </li>
         <li>
-          <a class="nav-links">Catalog</a>
+          <a class="nav-links" href="{{ route('catalog.index') }}">Catalog</a>
         </li>
         <li>
           <a class="nav-links">Testimonies</a>
@@ -57,7 +57,7 @@
           <a class="nav-links" href="{{ route('cart.index') }}">Cart</a>
         </li>
         <li>
-          <a class="nav-links">Profile</a>
+          <a class="nav-links" href="{{ route('profile.index') }}">Profile</a>
         </li>
         <li>
           <form action="{{ route('logout') }}" method="POST">

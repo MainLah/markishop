@@ -35,15 +35,18 @@ const coordsForNav = {
 const coordsArray = Object.keys(coordsForNav);
 for (let i = 0; i < coordsArray.length; i++) {
     navLinks[i].onclick = (e) => {
-        const linksException = ["Cart", "Catalog"];
+        const linksException = ["Cart", "Catalog", "Profile"];
         if (!linksException.includes(e.target.textContent)) {
             e.preventDefault();
             scroll(coordsForNav[coordsArray[i]]);
         }
     };
     navLinks[i + 6].onclick = (e) => {
-        e.preventDefault();
-        scroll(coordsForNav[coordsArray[i]]);
+        const linksException = ["Cart", "Catalog", "Profile"];
+        if (!linksException.includes(e.target.textContent)) {
+            e.preventDefault();
+            scroll(coordsForNav[coordsArray[i]]);
+        }
     };
 }
 

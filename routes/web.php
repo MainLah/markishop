@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,8 +45,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
     Route::patch('/cart/update/{cart}', [CartController::class, 'update'])->name('cart.update');
     Route::delete('/cart/remove/{cart}', [CartController::class, 'remove'])->name('cart.remove');
+
+    Route::post('/contact', [TestimonyController::class, 'create'])->name('testimony.create');
+    
+    Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
+    
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::put('/profile/update', [ProfileController::class, 'change_password'])->name('profile.change_password');
 });
-
-Route::post('/contact', [TestimonyController::class, 'create'])->name('testimony.create');
-
-Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
