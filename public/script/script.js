@@ -150,9 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then((response) => response.json())
                 .then((data) => {
                     if (data.success) {
-                        alert("Product added to cart!");
+                        window.alert("Product added to cart!");
                     } else {
-                        alert("Failed to add product to cart.");
+                        window.alert("Failed to add product to cart.");
                     }
                 })
                 .catch((error) => console.error("Error:", error));
