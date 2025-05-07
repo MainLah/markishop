@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\TestimonyController;
+use App\Http\Controllers\CatalogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,5 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::post('/contact', [TestimonyController::class, 'create'])->name('testimony.create');
+
+Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
