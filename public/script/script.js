@@ -35,7 +35,8 @@ const coordsForNav = {
 const coordsArray = Object.keys(coordsForNav);
 for (let i = 0; i < coordsArray.length; i++) {
     navLinks[i].onclick = (e) => {
-        if (e.target.textContent !== "Cart") {
+        const linksException = ["Cart", "Catalog"];
+        if (!linksException.includes(e.target.textContent)) {
             e.preventDefault();
             scroll(coordsForNav[coordsArray[i]]);
         }

@@ -64,8 +64,17 @@ class ProductSeeder extends Seeder
             ]
         ];
 
-        foreach ($products as $product) {
-            Product::create($product);
+        // foreach ($products as $product) {
+        //     Product::create($product);
+        // }
+
+        for ($i = 1; $i < 100; $i++) {
+            Product::create([
+                'name' => 'Product ' . $i,
+                'description' => 'Ini adalah produk ' . $i,
+                'price' => rand(5, 250),
+                'is_available' => true,
+            ]);
         }
     }
 }
