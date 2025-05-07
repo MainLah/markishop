@@ -725,6 +725,14 @@ footer a:hover {
     #testi p {
         font-size: 0.9rem;
     }
+
+    .page-number-nav {
+        display: none;
+    }
+
+    .custom-pagination {
+        flex-direction: row;
+    }
 }
 
 @keyframes error {
