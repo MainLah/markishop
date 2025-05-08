@@ -23,6 +23,18 @@ use App\Http\Controllers\ProfileController;
 
 Route::middleware(['check.auth'])->group(function () {
     Route::resource('/', ProductController::class);
+
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::patch('/cart/update/{cart}', [CartController::class, 'update'])->name('cart.update');
+    Route::delete('/cart/remove/{cart}', [CartController::class, 'remove'])->name('cart.remove');
+
+    Route::post('/contact', [TestimonyController::class, 'create'])->name('testimony.create');
+    
+    Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
+    
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::put('/profile/update', [ProfileController::class, 'change_password'])->name('profile.change_password');
 });
 
 Route::get('/login', [UserController::class, 'showLoginForm']);
@@ -39,17 +51,3 @@ Route::middleware(['check.admin'])->group(function () {
 
 Route::get('/login-admin', [AdminLoginController::class, 'show_admin_login_form']);
 Route::post('/login-admin', [AdminLoginController::class, 'login'])->name('admin-login');
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-    Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
-    Route::patch('/cart/update/{cart}', [CartController::class, 'update'])->name('cart.update');
-    Route::delete('/cart/remove/{cart}', [CartController::class, 'remove'])->name('cart.remove');
-
-    Route::post('/contact', [TestimonyController::class, 'create'])->name('testimony.create');
-    
-    Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
-    
-    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
-    Route::put('/profile/update', [ProfileController::class, 'change_password'])->name('profile.change_password');
-});
