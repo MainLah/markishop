@@ -2,13 +2,13 @@
 
 @section('content')
     @if (session('success'))
-    <div class="success-message">
-        {{ session('success') }}
-    </div>
+        <div class="success-message">
+            {{ session('success') }}
+        </div>
     @elseif (session('error'))
-    <div class="error-message">
-        {{ session('error') }}
-    </div>
+        <div class="error-message">
+            {{ session('error') }}
+        </div>
     @endif
 
 <main id="profile-section" style="height: 100vh">
